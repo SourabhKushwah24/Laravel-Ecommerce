@@ -1,0 +1,7 @@
+public/uploads/
+storage/logs/
+vendor
+.env
+.env.backup
+/.idea
+/.vscode
