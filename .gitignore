@@ -1,6 +1,6 @@
 public/uploads/
 storage/logs/
-vendor
+#vendor
 .env
 .env.backup
 /.idea
