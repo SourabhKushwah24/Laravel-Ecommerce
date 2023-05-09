@@ -31,7 +31,7 @@
                             @forelse ($sliders as $slider)
                                 <tr>
                                     <td>{{ $slider->id }}</td>
-                                    <td><img src="{{ asset("$slider->image") }}" alt=""></td>
+                                    <td><img src="{{ asset("$slider->image") }}" class="w-100" alt=""></td>
                                     <td>{{ $slider->title }}</td>
                                     <td>{{ $slider->description }}</td>
                                     <td>{{ $slider->status == '1' ? 'Hidden' : 'visible' }}</td>

@@ -140,6 +140,13 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4">
+                                        <div class="mb-3 ">
+                                            <label>Featured</label>
+                                            <input type="checkbox" name="featured"
+                                                {{ $product->featured == '1' ? 'checked' : '' }}>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
                                         <div class="mb-3 mt-2">
                                             <label>Status</label>
                                             <input type="checkbox" name="status"

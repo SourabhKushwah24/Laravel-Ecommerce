@@ -13,7 +13,7 @@
 
     <meta name="description" content="@yield('meta_description')">
     <meta name="keywords" content="@yield('meta_keyword')">
-    <meta name="author" content="@yield('Funda IT')">
+    <meta name="author" content="@yield('Sourabh')">
 
 
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.min.css') }}">
     {{-- Jquery Exzoom Css  --}}
     <link rel="stylesheet" href="{{ asset('assets/exzoom/jquery.exzoom.css') }}">
+
 
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Fonts -->
@@ -47,11 +48,12 @@
         <main class="py-2">
             @yield('content')
         </main>
+
+        @include('layouts.inc.frontend.footer')
     </div>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery-3.6.4.min.js') }}"></script>
-    {{-- Jquery Exzoom   --}}
-    <link rel="stylesheet" href="{{ asset('assets/exzoom/jquery.exzoom.js') }}">
+
 
     <!-- JavaScript -->
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
@@ -65,6 +67,9 @@
     </script>
     {{-- Owl Carousel Js  --}}
     <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+    {{-- Jquery Exzoom   --}}
+    <link rel="stylesheet" href="{{ asset('assets/exzoom/jquery.exzoom.js') }}">
+
     @yield('script')
 
     @livewireScripts

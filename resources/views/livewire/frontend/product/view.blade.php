@@ -7,30 +7,33 @@
         @endif --}}
         <div class="row">
             <div class="col-md-5 mt-3">
-                <div class="bg-white border" wire:ignore>
+                <div class="bg-white border">
                     @if ($products->productImages)
-                        {{-- <img src="{{ asset($products->productImages[0]->image) }}" class="w-100" alt="Img"> --}}
-                        <div class="exzoom" id="exzoom">
-                            <!-- Images -->
+                        <img src="{{ asset($products->productImages[0]->image) }}" class="w-100" alt="img">
+                    @else
+                        No Image Added
+                    @endif
+                </div>
+                {{-- <div class="bg-white border" wire:ignore>
+                    @if ($products->productImages)
+                        <div class="exzoom" id="exzoom">                           
                             <div class="exzoom_img_box">
                                 <ul class='exzoom_img_ul'>
-                                    @foreach ($products->productImages as $itemImage)
-                                        <li><img src="{{ asset($itemImage->image) }}" /></li>
+                                    @foreach ($products->productImages as $ItemImage)
+                                    <li><img src="{{asset($ItemImage->image)}}" /></li> 
                                     @endforeach
                                 </ul>
                             </div>
                             <div class="exzoom_nav"></div>
-                            <!-- Nav Buttons -->
                             <p class="exzoom_btn">
-                                <a href="javascript:void(0);" class="exzoom_prev_btn">
-                                    < </a>
-                                        <a href="javascript:void(0);" class="exzoom_next_btn"> > </a>
+                                <a href="javascript:void(0);" class="exzoom_prev_btn">< </a>
+                                <a href="javascript:void(0);" class="exzoom_next_btn"> > </a>
                             </p>
                         </div>
                     @else
-                        No image Added
+                        No Image Added
                     @endif
-                </div>
+                </div> --}}
             </div>
             <div class="col-md-7 mt-3">
                 <div class="product-view">
@@ -78,8 +81,8 @@
                     <div class="mt-2">
                         <div class="input-group">
                             <span class="btn btn1" wire:click="decrementQuantity"><i class="fa fa-minus"></i></span>
-                            <input type="text" wire:model="quantityCount" value="{{ $this->quantityCount }}"
-                                readonly class="input-quantity" />
+                            <input type="text" wire:model="quantityCount" value="{{ $this->quantityCount }}" readonly
+                                class="input-quantity" />
                             <span class="btn btn1" wire:click="incrementQuantity"><i class="fa fa-plus"></i></span>
                         </div>
                     </div>
@@ -119,7 +122,7 @@
     </div>
 </div>
 
-@push('scripts')
+{{-- @push('scripts')
     <script>
         $(function() {
 
@@ -135,4 +138,4 @@
 
         });
     </script>
-@endpush
+@endpush --}}

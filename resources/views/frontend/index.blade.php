@@ -66,7 +66,7 @@
                                                     <a
                                                         href="{{ url('/collections/' . $product->category->slug . '/' . $product->slug) }}">
                                                         <img src="{{ asset($product->productImages[0]->image) }}"
-                                                            alt=" {{ $product->name }}">
+                                                            class="w-100" alt=" {{ $product->name }}">
                                                     </a>
                                                 @endif
                                             </div>
