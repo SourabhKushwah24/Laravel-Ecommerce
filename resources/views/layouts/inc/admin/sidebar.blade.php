@@ -7,6 +7,22 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#user" aria-expanded="false" aria-controls="user">
+                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+                <span class="menu-title">Users</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="user">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{ url('admin/users/create') }}">Add
+                            User</a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ url('admin/users') }}">View Users</a></li>
+
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#category" aria-expanded="false"
                 aria-controls="category">
                 <i class="mdi mdi-format-list-bulleted menu-icon"></i>
@@ -58,6 +74,12 @@
             <a class="nav-link" href="{{ url('admin/order') }}">
                 <i class="mdi mdi mdi-shopping menu-icon"></i>
                 <span class="menu-title">Orders</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('admin/settings') }}">
+                <i class="mdi mdi mdi-shopping menu-icon"></i>
+                <span class="menu-title">Site Setting</span>
             </a>
         </li>
 
